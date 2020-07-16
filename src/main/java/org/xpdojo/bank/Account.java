@@ -1,14 +1,17 @@
 package org.xpdojo.bank;
 
 public class Account {
-    public String getState() {
-        return state;
+    public int getBalance() {
+        return balance;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
-    String state="New";
-
+    int balance;
+    protected int deposit(int amount){
+        balance =balance +amount;
+        return balance;
+    }
 }
