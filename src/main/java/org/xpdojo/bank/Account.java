@@ -17,8 +17,8 @@ public class Account {
         return balance;
     }
 
-    public void transfer(Account destinationAcct, int i) {
-      withdraw(i);
-      destinationAcct.deposit(i);
+    public void transfer(Account destinationAcct, int amnt) {
+      withdraw(amnt);
+      destinationAcct.deposit(amnt);
     }
 }
