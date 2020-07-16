@@ -13,5 +13,12 @@ public class AccountTest {
         assertThat(a.getBalance()).isEqualTo(10);
 
     }
+    @Test
+    public void withdrawMoney() {
+        Account a =new Account();
+        a.withdraw(10);
+        assertThat(a.getBalance()).isEqualTo(-10);
+
+    }
 
 }

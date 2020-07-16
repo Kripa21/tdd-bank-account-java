@@ -14,4 +14,9 @@ public class Account {
         balance =balance +amount;
         return balance;
     }
+
+    protected int withdraw(int amount){
+        balance =balance - amount;
+        return balance;
+    }
 }
