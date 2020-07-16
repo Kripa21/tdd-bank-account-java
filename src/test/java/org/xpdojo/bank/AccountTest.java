@@ -21,4 +21,16 @@ public class AccountTest {
 
     }
 
+    @Test
+    public void transferMoney() {
+        Account sourceAcct =new Account();
+        Account destinationAcct =new Account();
+        sourceAcct.transfer(destinationAcct,10);
+        assertThat(sourceAcct.getBalance()).isEqualTo(-10);
+        assertThat(destinationAcct.getBalance()).isEqualTo(10);
+
+    }
+
+
+
 }

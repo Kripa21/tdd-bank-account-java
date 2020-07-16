@@ -5,9 +5,6 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
 
     int balance;
     protected int deposit(int amount){
@@ -18,5 +15,10 @@ public class Account {
     protected int withdraw(int amount){
         balance =balance - amount;
         return balance;
+    }
+
+    public void transfer(Account destinationAcct, int i) {
+      withdraw(i);
+      destinationAcct.deposit(i);
     }
 }
