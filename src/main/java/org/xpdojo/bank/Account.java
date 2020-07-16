@@ -7,18 +7,18 @@ public class Account {
 
 
     int balance;
-    protected int deposit(int amount){
+    protected int depositMoneyIntoAccount(int amount){
         balance =balance +amount;
         return balance;
     }
 
-    protected int withdraw(int amount){
+    protected int withdrawMoneyFromAccount(int amount){
         balance =balance - amount;
         return balance;
     }
 
-    public void transfer(Account destinationAcct, int amnt) {
-      withdraw(amnt);
-      destinationAcct.deposit(amnt);
+    public void transferMoney(Account destinationAcct, int amnt) {
+      withdrawMoneyFromAccount(amnt);
+      destinationAcct.depositMoneyIntoAccount(amnt);
     }
 }

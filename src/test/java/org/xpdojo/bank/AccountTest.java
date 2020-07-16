@@ -7,25 +7,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountTest {
 
     @Test
-    public void depositMoney() {
+    public void testDepositMoneyIntoAccount() {
         Account a =new Account();
-        a.deposit(10);
+        a.depositMoneyIntoAccount(10);
         assertThat(a.getBalance()).isEqualTo(10);
 
     }
     @Test
-    public void withdrawMoney() {
+    public void testWithdrawMoneyIntoAccount() {
         Account a =new Account();
-        a.withdraw(10);
+        a.withdrawMoneyFromAccount(10);
         assertThat(a.getBalance()).isEqualTo(-10);
 
     }
 
     @Test
-    public void transferMoney() {
+    public void testTransferMoneyFromOneAccountToAnother() {
         Account sourceAcct =new Account();
         Account destinationAcct =new Account();
-        sourceAcct.transfer(destinationAcct,10);
+        sourceAcct.transferMoney(destinationAcct,10);
         assertThat(sourceAcct.getBalance()).isEqualTo(-10);
         assertThat(destinationAcct.getBalance()).isEqualTo(10);
 
